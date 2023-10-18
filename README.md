@@ -1,6 +1,6 @@
 # parcel-project-template
 
-https://marcinnieradka.github.io/projekt-grupa-2/
+https://github.com/MarcinNieradka/Project-IceCream
 
 ## Zalezności
 
