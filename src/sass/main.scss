@@ -1,0 +1,34 @@
+/*
+ * Główny plik dla stylów.
+ * Wszystkie partials podłączamy tutaj.
+ */
+
+// Style dla pliku z przykładem HTML fragmentu
+@use '../sass/utils' as *;
+@use '../sass/partials' as *;
+@import './modules/swiper-vars';
+@import './modules/pagination';
+@import './modules/swiper';
+@import './modules/effect-fade';
+@import './example';
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@500;700&family=Titan+One&display=swap');
+
+body {
+  font-family: var(--ff-primary);
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+.container {
+  margin-inline: auto;
+  padding-left: var(--pd-container);
+  padding-right: var(--pd-container);
+  max-width: var(--device-screen);
+}
+
+.header-container {
+  background-color: var(--bg-pink);
+  margin: auto;
+}

@@ -1,0 +1,77 @@
+@use '../utils' as *;
+
+@media (min-width: $desktop-size) {
+  .menu-toggle {
+    display: none;
+  }
+
+  .menu-container {
+    display: none;
+  }
+}
+
+.menu-container {
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 250px;
+  height: 100vh;
+  background-color: var(--bg-pink-dark);
+  z-index: 999;
+  transform: translateX(1280px);
+  transition: transform 250ms ease-in-out;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+.menu-container.is-open {
+  transform: translateX(0);
+}
+
+.menu-container .menu-toggle {
+  position: absolute;
+  top: 23px;
+  right: 28px;
+  cursor: pointer;
+}
+
+.button-example {
+  margin-top: 60px;
+}
+
+.mobile-menu {
+  margin-top: 19px;
+
+  & > li {
+    padding-left: 21px;
+    border-bottom: 1px solid #e18298;
+    display: flex;
+    align-items: center;
+    padding-top: 12px;
+    padding-bottom: 12px;
+  }
+
+  & > li:first-child {
+    border-top: 1px solid #e18298;
+  }
+
+  &__link {
+    text-decoration: none;
+    color: var(--text-white);
+  }
+
+  &__link:hover,
+  &__link:focus {
+    color: var(--text-pink);
+  }
+}
+
+.mobile-menu-close {
+  width: 14px;
+  height: 14px;
+}
+
+.button-primary--mobile-menu {
+  margin-top: 60px;
+  margin-left: auto;
+  margin-right: auto;
+}

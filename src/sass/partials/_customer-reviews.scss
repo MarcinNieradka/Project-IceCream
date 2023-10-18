@@ -1,0 +1,195 @@
+@use '../utils' as *;
+@import '../modules/pagination';
+@import '../modules/swiper-vars';
+@import '../modules/swiper';
+@import '../modules/effect-fade';
+
+$start-gap: 29px;
+
+.reviews {
+  padding-bottom: 170px;
+  background-color: var(--bg-white);
+  &__article {
+    background-color: var(--bg-gray);
+    padding-bottom: 26px;
+    padding-top: 43px;
+    margin-bottom: 15px;
+    // padding: 43px 50px 26px;
+    &__wrapper {
+      background-image: repeating-linear-gradient(
+        var(--bg-gray) $start-gap,
+        var(--stroke) 0px,
+        var(--bg-gray) calc($start-gap + 1px),
+        var(--bg-gray) calc($start-gap + $start-gap + 1px)
+      );
+      max-width: 180px;
+      width: 100%;
+      height: 100%;
+      margin: 0 auto;
+      position: relative;
+    }
+  }
+
+  &__photo {
+    max-width: 85px;
+    width: 100%;
+    margin: 80px auto 29px;
+  }
+
+  &__text {
+    max-width: 150px;
+    width: 100%;
+    margin: 0 auto;
+    text-align: center;
+    position: relative;
+    z-index: 10;
+  }
+
+  &__icon {
+    fill: var(--stroke);
+    position: absolute;
+    z-index: 1;
+    left: 10px;
+    top: -10px;
+  }
+
+  &__name {
+    margin-top: 48px;
+    text-align: center;
+    margin-bottom: 52px;
+    position: relative;
+
+    &:before {
+      content: '...';
+      color: #c7133e;
+      font-size: 30px;
+      letter-spacing: 4px;
+      position: absolute;
+      top: -55px;
+      left: calc(50% - 11px);
+    }
+  }
+}
+
+@media screen and (min-width: $tablet-size) {
+  .reviews {
+    &__article {
+      background-color: var(--text-white);
+      padding-bottom: 0;
+      &__wrapper {
+        max-width: 490px;
+        background-image: repeating-linear-gradient(
+          var(--text-white) $start-gap,
+          var(--stroke) 0px,
+          var(--text-white) calc($start-gap + 1px),
+          var(--text-white) calc($start-gap + $start-gap + 1px)
+        );
+      }
+    }
+    &__photo {
+      margin: 120px auto 19px;
+    }
+
+    &__text {
+      max-width: 460px;
+    }
+    &__icon {
+      left: -20px;
+      top: -20px;
+    }
+    &__name {
+      margin-top: 42px;
+    }
+  }
+}
+
+@media screen and (min-width: $desktop-size) {
+  .reviews {
+    &__article {
+      background-color: var(--bg-gray);
+      padding-bottom: 30px;
+      &__wrapper {
+        max-width: 800px;
+        padding-bottom: 2px;
+        background-image: repeating-linear-gradient(
+          var(--bg-gray) $start-gap,
+          var(--stroke) 0px,
+          var(--bg-gray) calc($start-gap + 1px),
+          var(--bg-gray) calc($start-gap + $start-gap + 1px)
+        );
+      }
+    }
+    &__text {
+      max-width: 750px;
+    }
+    &__icon {
+      left: 0px;
+      top: -20px;
+    }
+    &__name {
+      margin-top: 30px;
+      &:before {
+        top: -45px;
+      }
+    }
+  }
+}
+
+// tymczasowa klasa
+
+.display-none {
+  display: none;
+}
+
+.swiper-pagination {
+  display: flex;
+  justify-content: center;
+  gap: 18px;
+}
+
+.swiper .swiper-pagination-bullet {
+  width: 12px;
+  height: 12px;
+  margin-top: 30px;
+}
+
+.swiper .swiper-pagination-bullet-active {
+  background-image: url('../images/old-svg/slider.svg');
+  background-size: 100%;
+  background-color: transparent;
+  background-repeat: no-repeat;
+}
+
+.red-dot {
+  position: relative;
+  height: 4px;
+  display: block;
+  overflow: hidden;
+
+  &__icon {
+    position: absolute;
+    top: 0;
+    left: 50%;
+  }
+
+  &:before {
+    content: '';
+    display: block;
+    background-image: url('../images/reviews-ellipse.svg');
+    width: 4px;
+    height: 4px;
+    position: absolute;
+    left: calc(50% - 10px);
+    top: 0;
+  }
+  &:after {
+    content: '';
+    display: block;
+    background-image: url('../images/reviews-ellipse.svg');
+    width: 4px;
+    height: 4px;
+    position: absolute;
+    left: calc(50% + 10px);
+    top: 0;
+  }
+}

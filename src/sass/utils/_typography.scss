@@ -1,0 +1,175 @@
+@use '../utils/variables' as *;
+
+//mixin do textów
+
+@mixin text($size, $color, $weight, $line) {
+  font-size: $size;
+  color: $color;
+  font-weight: $weight;
+  line-height: $line;
+}
+
+// Klasy dla nagłówków - wszystkie z font - family "Titan One"
+
+.header-550 {
+  @include text(var(--fs-550), var(--text-pink-light), 400, 1.145);
+  font-family: var(--ff-header);
+  text-transform: uppercase;
+}
+
+.header-600 {
+  @include text(var(--fs-600), var(--text-white), 400, 1.145);
+  font-family: var(--ff-header);
+  letter-spacing: 0.04em;
+}
+
+.header-700 {
+  @include text(var(--fs-700), var(--text-white), 400, 1.145);
+  font-family: var(--ff-header);
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+.header-750 {
+  @include text(var(--fs-750), var(--text-pink), 400, 1.145);
+  font-family: var(--ff-header);
+  letter-spacing: 0.04em;
+}
+
+.header-800 {
+  @include text(var(--fs-800), var(--text-pink), 400, 1.145);
+  font-family: var(--ff-header);
+  letter-spacing: 0.04em;
+}
+
+.header-850 {
+  @include text(var(--fs-850), var(--text-pink), 400, 1.145);
+  font-family: var(--ff-header);
+  letter-spacing: 0.04em;
+}
+
+.header-900 {
+  @include text(var(--fs-900), var(--text-pink), 400, 0.9);
+  font-family: var(--ff-header);
+}
+
+//Klasy dla tekstów.
+
+.text-200 {
+  @include text(var(--fs-200), var(--text-white), 400, 1.25);
+  font-family: var(--ff-primary);
+}
+
+.text-300 {
+  @include text(var(--fs-300), var(--text-gray), 500, 1.62);
+}
+
+.text-325 {
+  @include text(var(--fs-325), var(--text-black), 500, 1.62);
+  &--advantages {
+    font-weight: 700;
+  }
+  &--quote {
+    line-height: 2.55;
+  }
+  &--city {
+    letter-spacing: 0.04em;
+  }
+  &--address {
+    color: var(--text-gray);
+  }
+  &--hours {
+    color: var(--text-pink-light);
+  }
+  &--contact {
+    font-weight: 700;
+  }
+  &--phone {
+    color: var(--text-pink);
+  }
+}
+
+.text-350 {
+  @include text(var(--fs-350), var(--text-white), 500, 1.86);
+  letter-spacing: 0.04em;
+}
+
+.text-375 {
+  @include text(var(--fs-375), var(--text-black), 500, 1.86);
+}
+
+.text-400 {
+  @include text(var(--fs-400), var(--text-white), 700, 1.3);
+  &--products {
+    line-height: 1.52;
+    letter-spacing: 0.04em;
+  }
+}
+
+.text-750 {
+  @include text(var(--fs-750), var(--text-pink), 400, 1.14);
+  font-family: var(--ff-header);
+  letter-spacing: 0.04em;
+}
+
+.text-copyright {
+  @include text(0.875rem, var(--text-gray), 700, 1.52);
+}
+
+// Responsywność czcionek:
+@media (min-width: $tablet-size) {
+  .header-900 {
+    letter-spacing: 0.04em;
+  }
+
+  .text-300 {
+    line-height: 1.76;
+    letter-spacing: 0.04em;
+  }
+
+  .text-325 {
+    line-height: 1.76;
+  }
+
+  .text-325--quote {
+    line-height: 2.16;
+    letter-spacing: 0.04em;
+  }
+
+  .text-400--products {
+    line-height: 1.76;
+  }
+
+  .text-copyright {
+    line-height: 1.86;
+    letter-spacing: 2%;
+    text-align: center;
+  }
+}
+
+@media (min-width: $desktop-size) {
+  .text-200 {
+    line-height: 1.3;
+  }
+
+  .text-300 {
+    line-height: 1.94;
+  }
+
+  .text-325 {
+    letter-spacing: 0.04em;
+    &--address {
+      letter-spacing: 0;
+    }
+  }
+
+  .text-325--quote {
+    line-height: 1.86;
+  }
+}
+
+//Klasy dla przycisków
+
+.button-500 {
+  @include text(var(--fs-500), var(--text-pink), 700, 1.31);
+}

@@ -1,0 +1,79 @@
+@use '../utils' as *;
+
+.advantages {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--bg-pink-light);
+  padding-bottom: 6.063rem;
+  @media screen and (min-width: $tablet-size) {
+    flex-direction: row;
+    max-width: $tablet-size;
+    margin: 0 auto;
+    padding-right: 4.5rem;
+    padding-left: 3rem;
+    gap: 3.75rem;
+    background-color: var(--bg-pink-light);
+    max-width: 100%;
+    padding-bottom: 8.75rem;
+  }
+  @media screen and (min-width: $desktop-size) {
+    gap: 1.875rem;
+    padding-bottom: 8.688rem;
+  }
+  &__wrapper {
+    max-width: 320px;
+    padding: 2.375rem 4.375rem 0 1.25rem;
+    background-color: var(--bg-pink-light);
+
+    @media screen and (min-width: $tablet-size) {
+      max-width: 180px;
+      padding: 0;
+    }
+    @media screen and (min-width: $desktop-size) {
+      max-width: 330px;
+    }
+  }
+  &__number {
+    display: block;
+    padding: 1rem 0;
+    @media screen and (min-width: $tablet-size) {
+      padding: 2.25rem 0 0.813rem 0;
+    }
+    @media screen and (min-width: $desktop-size) {
+      padding: 2.5rem 0 0.938rem 0;
+    }
+  }
+  &__picture {
+    display: block;
+    position: relative;
+    &:hover {
+      &::before {
+        content: '';
+        position: absolute;
+        width: 80px;
+        height: 80px;
+        top: -1rem;
+        left: -1.2rem;
+        border-right: 4px solid var(--bg-pink-dark);
+        border-radius: 50%;
+        animation: animate 2s linear infinite;
+      }
+    }
+  }
+  &__picture:hover > &__image {
+    transform: scale(0.8);
+  }
+  &__picture:hover > &__image--milk {
+    margin-left: 0.3rem;
+  }
+}
+@keyframes animate {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}

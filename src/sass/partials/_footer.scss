@@ -1,0 +1,83 @@
+@use '../utils' as *;
+.footer {
+  background-color: var(--bg-pink-light);
+  padding-top: 113px;
+  &__span {
+    display: inline-block;
+    margin-top: 17px;
+  }
+  @media (min-width: $desktop-size) {
+    &__span {
+      min-width: max-content;
+    }
+  }
+  &__flex {
+    display: flex;
+    flex-direction: column;
+    gap: 43px;
+  }
+  @media (min-width: $tablet-size) {
+    &__flex {
+      flex-direction: row;
+      justify-content: space-between;
+    }
+  }
+  @media (min-width: $tablet-size) {
+    &__right-box {
+      align-self: flex-start;
+    }
+  }
+
+  &__social-list {
+    display: flex;
+    justify-content: flex-end;
+    gap: 28.24px;
+  }
+
+  &__copy-box {
+    padding: 22px 50px 25px;
+    border-top: 1px solid var(--stroke);
+    margin-top: 43px;
+  }
+  @media (min-width: $tablet-size) {
+    &__copy-box {
+      margin-top: 91px;
+    }
+  }
+  @media (min-width: $desktop-size) {
+    &__copy-box {
+      margin-top: 98px;
+    }
+  }
+
+  &__copy {
+    text-align: center;
+  }
+
+  &__contact {
+    margin-top: 46px;
+    text-align: right;
+  }
+  @media (min-width: $tablet-size) {
+    &__contact {
+      min-width: max-content;
+    }
+  }
+  @media (min-width: $tablet-size) {
+    &__header {
+      padding: 0 16px 0 0;
+    }
+  }
+  @media (min-width: $desktop-size) {
+    &__header {
+      padding: 0 94px 0 0;
+    }
+  }
+  &__social-icon {
+    fill: var(--text-pink-light);
+  }
+
+  &__social-icon:hover {
+    fill: var(--text-pink);
+  }
+}

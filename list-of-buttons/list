@@ -1,0 +1,50 @@
+<button type="button" class="button-primary button-500 button-primary--mobile-menu">
+  Buy now
+  <svg class="button-primary__icon-greater-than">
+    <use href="./images/icons.svg#icon-greater-than"></use>
+  </svg>
+</button>
+
+<button type="button" class="button-primary text-200 button-primary--header">How it’s made?</button>
+
+<button type="button" class="button-secondary text-200 button-secondary--header">Products</button>
+
+<button type="button" class="button-arrow button-arrow--products">
+  <svg>
+    <use href="./images/icons.svg#icon-arrow-right"></use>
+  </svg>
+</button>
+
+<button type="button" class="button-arrow button-arrow--header">
+  <svg>
+    <use href="./images/icons.svg#icon-arrow-right"></use>
+  </svg>
+</button>
+
+<button type="button" class="button-primary text-400 button-primary--about">
+  Read more
+  <svg class="button-primary__icon-greater-than">
+    <use href="./images/icons.svg#icon-greater-than"></use>
+  </svg>
+</button>
+
+<button type="button" class="button-secondary button-500 button-secondary--contacts">
+  Our Locations
+  <svg class="button-secondary__icon-greater-than">
+    <use href="./images/icons.svg#icon-greater-than"></use>
+  </svg>
+</button>
+
+<button type="button" class="button-primary button-500 button-primary--contacts">
+  Franchise
+  <svg class="button-primary__icon-greater-than">
+    <use href="./images/icons.svg#icon-greater-than"></use>
+  </svg>
+</button>
+
+<button type="button" class="button-primary button-500 button-primary--header-buy-now">
+  Buy now
+  <svg class="button-primary__icon-greater-than">
+    <use href="./images/icons.svg#icon-greater-than"></use>
+  </svg>
+</button>

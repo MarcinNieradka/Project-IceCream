@@ -1,0 +1,145 @@
+@use '../utils' as *;
+.about {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--bg-pink-light);
+  padding-top: 125px;
+  background-image: url('../images/about/webp/about-bg-mobile.webp');
+  background-repeat: no-repeat;
+  background-position: 50% 90%;
+  background-size: 100vw;
+
+  &__title {
+    text-align: center;
+  }
+  &__titleFirst {
+    text-transform: uppercase;
+  }
+  &__titleSecond {
+    margin-top: 15px;
+    text-transform: uppercase;
+  }
+  &__cow-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  &__cow {
+    text-decoration: none;
+  }
+  &__description {
+    max-width: 320px;
+    padding-left: 30px;
+    padding-right: 30px;
+    & > *:nth-child(1) {
+      margin-top: 46px;
+    }
+    & > *:nth-child(2) {
+      margin-top: 40px;
+    }
+    & > *:nth-child(3) {
+      padding-top: 14px;
+    }
+  }
+  &__button {
+    position: relative;
+    margin: 17px 0 17px 0px;
+  }
+  &__splash {
+    text-decoration: none;
+  }
+}
+
+//------BEGIN---RETINA (ONLY MOBILE)
+@media (min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
+  .about {
+    background-image: url('../images/about/webp/about-bg-mobile@2x.webp');
+  }
+}
+@media (min-device-pixel-ratio: 3), (min-resolution: 288dpi), (min-resolution: 3dppx) {
+  .about {
+    background-image: url('../images/about/webp/about-bg-mobile@3x.webp');
+  }
+}
+//------END---RETINA (ONLY MOBILE)
+
+@media screen and (min-width: $tablet-size) {
+  .about {
+    background-image: none;
+    padding-top: 130px;
+    background-position: 50% 125%;
+
+    &__cow-container {
+      display: flex;
+      flex-direction: row;
+    }
+    &__cow {
+      margin-top: -120px;
+      flex: none;
+      text-decoration: none;
+    }
+    &__description {
+      max-width: none;
+      padding-left: 17px;
+      padding-right: 0px;
+      & > *:nth-child(1) {
+        margin-top: 100px;
+      }
+    }
+    &__button {
+      margin: 62px 0 66px 0px;
+    }
+  }
+}
+
+//------BEGIN---RETINA (ONLY DESKTOP)
+
+@media screen and (min-width: $desktop-size) and (min-device-pixel-ratio: 2),
+  screen and (min-width: $desktop-size) and (min-resolution: 192dpi),
+  screen and (min-width: $desktop-size) and (min-resolution: 2dppx) {
+  .about {
+    background-image: url('../images/about/webp/about-bg-desktop@2x.webp');
+  }
+}
+@media screen and (min-width: $desktop-size) and (min-device-pixel-ratio: 3),
+  screen and (min-width: $desktop-size) and (min-resolution: 288dpi),
+  screen and (min-width: $desktop-size) and (min-resolution: 3dppx) {
+  .about {
+    background-image: url('../images/about/webp/about-bg-desktop@3x.webp');
+  }
+}
+//------END---RETINA (ONLY DESKTOP)
+
+@media screen and (min-width: $desktop-size) {
+  .about {
+    background-image: url('../images/about/about-bg-desktop.png');
+    padding-top: 125px;
+
+    &__cow-container {
+      display: flex;
+      flex-direction: row;
+    }
+    &__cow {
+      margin-top: 55px;
+      flex: none;
+      text-decoration: none;
+    }
+    &__description {
+      max-width: none;
+      padding-left: 60px;
+      padding-right: 0px;
+      & > *:nth-child(1) {
+        margin-top: 100px;
+      }
+      & > *:nth-child(3) {
+        padding-top: 30px;
+      }
+    }
+    &__button {
+      margin: 42px 0 66px 0px;
+    }
+  }
+}

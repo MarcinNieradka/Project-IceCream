@@ -1,0 +1,170 @@
+@use '../utils/variables' as *;
+@use '../utils/typography' as *;
+
+.button-primary {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 22px;
+  background-color: var(--bg-white);
+  cursor: pointer;
+  color: var(--text-pink);
+
+  &:hover,
+  &:focus {
+    background-color: var(--bg-gray-hover);
+  }
+
+  &__icon-greater-than {
+    height: 10px;
+    width: 6px;
+    fill: var(--text-pink);
+  }
+
+  &--mobile-menu {
+    width: 209px;
+    height: 44px;
+    gap: 28px;
+  }
+
+  &--header {
+    width: 83px;
+    height: 24px;
+    transition: box-shadow 250ms ease-in-out, background-color 250ms ease-in-out;
+    animation: slide-up 500ms 1, fadeIn 500ms 1;
+
+    a {
+      color: var(--text-pink);
+    }
+
+    &:hover,
+    &:focus {
+      box-shadow: var(--text-pink-light) 0 5px 10px 5px;
+    }
+  }
+
+  &--about {
+    width: 176px;
+    height: 44px;
+    gap: 19px;
+  }
+
+  &--contacts {
+    width: 161px;
+    height: 44px;
+    gap: 16px;
+  }
+
+  &--header-buy-now {
+    width: 160px;
+    height: 44px;
+    gap: 14px;
+  }
+}
+
+.button-secondary {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 22px;
+  background-color: var(--text-pink);
+  cursor: pointer;
+  color: var(--text-white);
+
+  &__icon-greater-than {
+    height: 10px;
+    width: 6px;
+    fill: var(--text-white);
+  }
+
+  &--header {
+    width: 62px;
+    height: 24px;
+    transition: box-shadow 250ms ease-in-out, background-color 250ms ease-in-out;
+    animation: slide-up 250ms 1, fadeIn 250ms 1;
+
+    &:hover,
+    &:focus {
+      box-shadow: var(--text-pink-light) 0 5px 10px 5px;
+    }
+  }
+
+  &--contacts {
+    width: 161px;
+    height: 44px;
+    gap: 11px;
+  }
+}
+
+.button-arrow {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  background-color: var(--bg-white);
+  cursor: pointer;
+
+  &--products {
+    width: 40px;
+    height: 40px;
+
+    svg {
+      width: 11px;
+      height: 10px;
+    }
+  }
+
+  &--header {
+    width: 26px;
+    height: 26px;
+
+    svg {
+      width: 7px;
+      height: 6px;
+    }
+  }
+
+  &:hover,
+  &:focus {
+    background-color: var(--bg-gray-hover);
+  }
+
+  svg {
+    fill: var(--text-pink);
+  }
+}
+
+@media (min-width: $tablet-size) {
+  .button-primary {
+    &--mobile-menu {
+      width: 186px;
+      gap: 22px;
+    }
+
+    &--contacts {
+      width: 174px;
+    }
+  }
+
+  .button-secondary {
+    &--contacts {
+      width: 191px;
+    }
+  }
+}
+
+@media (min-width: $desktop-size) {
+  .button-primary {
+    &--header {
+      width: 138px;
+      height: 40px;
+    }
+  }
+
+  .button-secondary {
+    &--header {
+      width: 104px;
+      height: 40px;
+    }
+  }
+}

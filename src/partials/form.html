@@ -1,0 +1,135 @@
+<div class="backdrop is-hidden" data-modal>
+  <div class="modal">
+    <button type="button" class="close-btn" data-modal-close>X</button>
+    <h2 class="modal__title header-550">Complete the order form</h2>
+    <form class="modal-form">
+      <div class="modal-form__container">
+        <div class="modal-form__order-box modal-form__order-box--ice-cream-colors header-550">
+          <label for="ice-cream">Ice cream</label>
+          <input
+            class="modal-form__amount modal-form__amount--ice-cream-border"
+            type="number"
+            name="ice-cream"
+            min="0"
+            max="999"
+            step="1"
+            value="0"
+            id="ice-cream"
+            oninput="this.value = Math.abs(this.value)"
+          />
+        </div>
+        <div class="modal-form__order-box modal-form__order-box--ice-coffee-colors header-550">
+          <label for="ice-coffee">Ice coffee</label>
+          <input
+            class="modal-form__amount modal-form__amount--ice-coffee-border"
+            type="number"
+            name="ice-coffee"
+            min="0"
+            max="999"
+            step="1"
+            value="0"
+            id="ice-coffee"
+            oninput="this.value = Math.abs(this.value)"
+          />
+        </div>
+        <div class="modal-form__order-box modal-form__order-box--milkshakes-colors header-550">
+          <label for="milkshakes">Milkshakes</label>
+          <input
+            class="modal-form__amount modal-form__amount--milkshakes-border"
+            type="number"
+            name="milkshakes"
+            min="0"
+            max="999"
+            step="1"
+            value="0"
+            id="milkshakes"
+            oninput="this.value = Math.abs(this.value)"
+          />
+        </div>
+      </div>
+      <div class="modal-form__box">
+        <label class="modal-form__label text-400" for="name"> Name </label>
+        <input placeholder="John Doe" class="modal-form__input" type="text" name="name" id="name" />
+        <svg class="modal-form__icon-user">
+          <use href="./images/icons.svg#icon-user"></use>
+        </svg>
+      </div>
+      <div class="modal-form__box">
+        <label class="modal-form__label text-400" for="phone-number"> Phone </label>
+        <input
+          placeholder="+48 000 000 000"
+          class="modal-form__input"
+          type="tel"
+          name="phone-number"
+          id="phone-number"
+        />
+        <svg class="modal-form__icon-phone">
+          <use href="./images/icons.svg#icon-phone"></use>
+        </svg>
+      </div>
+      <div class="modal-form__box">
+        <label class="modal-form__label text-400" for="email"> Email </label>
+        <input
+          placeholder="example@gmail.com"
+          class="modal-form__input"
+          type="email"
+          name="email"
+          id="email"
+        />
+        <svg class="modal-form__icon-mail">
+          <use href="./images/icons.svg#icon-mail"></use>
+        </svg>
+      </div>
+      <div class="modal-form__box">
+        <label class="modal-form__label text-400" for="comments"> Address </label>
+        <input
+          class="modal-form__textarea"
+          name="comments"
+          type="text"
+          placeholder="31-419 Kraków ul. Rozrywka 1"
+          id="comments"
+        />
+        <svg class="modal-form__icon-location">
+          <use href="./images/icons.svg#icon-location"></use>
+        </svg>
+      </div>
+      <p class="modal-form__sub-title text-400">Payment Options</p>
+      <div class="modal-form__choose-option">
+        <label class="modal-form__checkbox-label">
+          <input type="radio" name="payment" value="cash" checked />
+          Cash
+          <svg
+            class="modal-form__payment-icon modal-form__payment-icon--cash"
+            width="13px"
+            height="13px"
+          >
+            <use href="./images/icons.svg#icon-cash"></use>
+          </svg>
+        </label>
+        <label class="modal-form__checkbox-label">
+          <input type="radio" name="payment" value="card" />
+          Pay Cards
+          <svg class="modal-form__payment-icon" width="20px" height="16px">
+            <use href="./images/icons.svg#icon-credit-card"></use>
+          </svg>
+        </label>
+        <label class="modal-form__checkbox-label">
+          <input type="radio" name="payment" value="paypal" />
+          PayPal
+          <svg
+            class="modal-form__payment-icon modal-form__payment-icon--paypal"
+            width="11.87px"
+            height="14px"
+          >
+            <use href="./images/icons.svg#icon-paypal"></use>
+          </svg>
+        </label>
+      </div>
+      <button type="button" class="button-secondary button-500 button-secondary--form">
+        ORDER NOW
+      </button>
+    </form>
+  </div>
+</div>
+
+<script src="./js/modal.js"></script>

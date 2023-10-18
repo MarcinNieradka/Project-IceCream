@@ -1,0 +1,213 @@
+<div id="home" class="header-container">
+  <header class="header">
+    <nav class="nav">
+      <a class="logo" href="#">
+        <picture>
+          <img
+            src="images/hero/webp/logo.webp"
+            alt="logo picture"
+            width="199"
+            height="50"
+            srcset="./images/hero/webp/logo@2x.webp x2, ./images/hero/webp/logo@3x.webp x3"
+          />
+        </picture>
+      </a>
+
+      <!-- -----------Responsive nav Burger-button start ------ -->
+
+      <button class="menu-toggle js-open-menu" aria-expanded="false" aria-controls="mobile-menu">
+        <!-- <svg width="20" height="12" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                  <path
+                    fill-rule="evenodd"
+                    d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 15a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z"
+                    clip-rule="evenodd"
+                  ></path>
+                </svg> -->
+        <!-- <svg width="20" height="12" fill="currentColor">
+          <use href="images/icons.svg#icon-burger"></use>
+        </svg> -->
+        <div class="burger-container">
+          <div class="burger-container__icon"></div>
+        </div>
+      </button>
+
+      <!-- -----------Responsive nav Burger-button end--------- -->
+
+      <ul class="nav__links">
+        <li><a class="nav__link text-400" href="#">Home</a></li>
+        <li><a class="nav__link text-400" href="#about-us">About us</a></li>
+        <li><a class="nav__link text-400" href="#about-us">How it's made?</a></li>
+        <li><a class="nav__link text-400" href="#products">Our products</a></li>
+        <li><a class="nav__link text-400" href="#contact">Contact</a></li>
+      </ul>
+      <button class="nav__button" type="button" data-modal-open>
+        <p>Buy now</p>
+
+        <svg width="6" height="10" fill="currentColor">
+          <use href="images/icons.svg#icon-greater-than"></use>
+        </svg>
+      </button>
+    </nav>
+
+    <div class="header__articles">
+      <div class="header__article-main">
+        <h1 class="header-700">
+          ice cream <br />made with <br /><span class="header-900">passion</span>
+        </h1>
+      </div>
+      <div class="header__article-numbers">
+        <div class="header__article-number text-750">
+          16
+          <span class="text-200">cafes</span>
+          <div class="header__article-circle"></div>
+        </div>
+        <div class="header__article-number text-750">
+          23
+          <span class="text-200">food trucks</span>
+          <div class="header__article-circle"></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="header__buttons">
+      <button
+        class="button-secondary button-secondary--header text-200"
+        onClick="location.href='#products'"
+        type="button"
+      >
+        Products
+      </button>
+
+      <button
+        class="button-primary button-primary--header text-200"
+        onClick="location.href='#about-us'"
+        type="button"
+      >
+        How it's made?
+      </button>
+    </div>
+
+    <div class="header__description">
+      <p class="header__description-text text-200">
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+        labore et
+      </p>
+
+      <button class="header__description-button" onClick="location.href='#contact'" type="button">
+        <svg width="7" height="7" fill="currentColor">
+          <use href="images/icons.svg#icon-arrow-right"></use>
+        </svg>
+      </button>
+    </div>
+
+    <div class="header__circle-bg"></div>
+
+    <picture class="header__hero-ice-cream">
+      <source
+        media="(min-width: 1280px)"
+        width="236"
+        height="557"
+        srcset="
+          ./images/hero/webp/hero-ice-cream-desktop.webp    1x,
+          ./images/hero/webp/hero-ice-cream-desktop@2x.webp 2x,
+          ./images/hero/webp/hero-ice-cream-desktop@3x.webp 3x
+        "
+      />
+      <source
+        media="(min-width: 768px)"
+        width="143"
+        height="336"
+        srcset="
+          ./images/hero/webp/hero-ice-cream-tablet.webp    1x,
+          ./images/hero/webp/hero-ice-cream-tablet@2x.webp 2x,
+          ./images/hero/webp/hero-ice-cream-tablet@3x.webp 3x
+        "
+      />
+      <img
+        src="images/hero/webp/hero-ice-cream-mobile.webp"
+        alt="picture of a big icecream"
+        width="171"
+        height="410"
+        srcset="./images/hero/webp/hero-ice-cream-mobile@2x.webp x2, ./images/hero/webp/hero-ice-cream-mobile@3x.webp x3"
+      />
+    </picture>
+
+    <picture class="header__hero-girl">
+      <source
+        media="(min-width: 1280px)"
+        width="293"
+        height="232"
+        srcset="
+          ./images/hero/webp/hero-girl-desktop.webp    1x,
+          ./images/hero/webp/hero-girl-desktop@2x.webp 2x,
+          ./images/hero/webp/hero-girl-desktop@3x.webp 3x
+        "
+      />
+      <img
+        src="images/hero/webp/hero-girl-tablet.webp"
+        alt="girl lickin icecream"
+        width="168"
+        height="133"
+        srcset="./images/hero/webp/hero-girl-tablet@2x.webp x2, ./images/hero/webp/hero-girl-tablet@3x.webp x3"
+      />
+    </picture>
+
+    <!-- <img
+      class="header__hero-girl"
+      width="168"
+      height="133"
+      src="images/hero/hero-girl-tablet.png"
+      alt="Logo image"
+      srcset="
+        images/hero/hero-girl-tablet.png     168w,
+        images/hero/hero-girl-desktop.png    293w,
+        images/hero/hero-girl-tablet@2x.png  336w,
+        images/hero/hero-girl-tablet@3x.png  504w,
+        images/hero/hero-girl-desktop@2x.png 586w,
+        images/hero/hero-girl-desktop@3x.png 879w
+      "
+      sizes="(min-width:1280px) 188px, 124px"
+    /> -->
+
+    <picture class="header__hero-milk">
+      <source
+        media="(min-width: 1280px)"
+        width="188"
+        height="191"
+        srcset="
+          ./images/hero/webp/hero-milk-desktop.webp    1x,
+          ./images/hero/webp/hero-milk-desktop@2x.webp 2x,
+          ./images/hero/webp/hero-milk-desktop@3x.webp 3x
+        "
+      />
+      <img
+        src="images/hero/webp/hero-milk-tablet.webp"
+        alt="picture of a big icecream"
+        width="124"
+        height="126"
+        srcset="./images/hero/webp/hero-milk-tablet@2x.webp x2, ./images/hero/webp/hero-milk-tablet@3x.webp x3"
+      />
+    </picture>
+
+    <!-- <button type="button" class="button-primary text-200 button-primary--header">
+      How it’s made?
+    </button> -->
+
+    <!-- <button type="button" class="button-secondary text-200 button-secondary--header">
+      Products
+    </button> -->
+
+    <!-- <button type="button" class="button-arrow button-arrow--header">
+      <svg>
+        <use href="./images/icons.svg#icon-arrow-right"></use>
+      </svg>
+    </button> -->
+
+    <!-- <button type="button" class="button-primary button-500 button-primary--header-buy-now">
+      Buy now
+      <svg class="button-primary__icon-greater-than">
+        <use href="./images/icons.svg#icon-greater-than"></use>
+      </svg>
+    </button> -->
+  </header>
+</div>
